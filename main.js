@@ -319,3 +319,26 @@ function fun2() {
 fun1();
 fun2();
 
+// Local Scope  (only visible inside function)
+function myLocalScope() {
+    var myVar = 5;
+    console.log(myVar);
+}
+
+myLocalScope();
+
+//console.log(myVar); // Error because myVar can't be assessed outside of function
+
+
+// GLOBAL VS LOCAL SCOPE IN FUNCTIONS
+
+var outerWear = "T-Shirt"
+
+function myOutfit() {
+   var outerWear = "sweater"; // Local scope will take precedence because it is declared inside function
+
+   return outerWear;
+}
+
+console.log(myOutfit()); // output will show on console log because of global scope can be declared outside of function but then be overwritten by "sweater" because local scope is declared inside of function
+
